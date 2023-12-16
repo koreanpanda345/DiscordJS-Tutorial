@@ -1,0 +1,23 @@
+{
+  "name": "discordjs-tutorial",
+  "version": "1.0.0",
+  "description": "A youtube series on making a discord bot using Discord.JS and Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "glob": "^10.3.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4"
+  }
+}
