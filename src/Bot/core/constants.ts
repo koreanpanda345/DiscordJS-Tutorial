@@ -12,6 +12,7 @@ export enum FolderPath {
   ROOT_FOLDER = "src/Bot",
   COMMAND_FOLDER = "commands",
   EVENT_FOLDER = "events",
+  MIDDLEWARE_FOLDER = "middlewares",
   MONITOR_FOLDER = "monitors",
   TASK_FOLDER = "tasks",
 }

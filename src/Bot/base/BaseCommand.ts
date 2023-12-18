@@ -28,7 +28,7 @@ export default abstract class BaseCommand {
   public set disabled(disabled: boolean) {
     this._disabled = disabled;
   }
-  public set userPermission(perms: PermissionResolvable[]) {
+  public set userPermissions(perms: PermissionResolvable[]) {
     this._userPermissions = perms;
   }
   public set selfPermissions(perms: PermissionResolvable[]) {

@@ -1,6 +1,7 @@
-import { Interaction } from "discord.js";
+import { CommandInteraction, Interaction } from "discord.js";
 import BaseEvent from "../../../base/BaseEvent";
 import { botCache } from "../../../core/constants";
+import CommandContext from "../../../contexts/CommandContext";
 
 export default class InteractionCreateEvent extends BaseEvent {
   constructor() {
@@ -9,7 +10,9 @@ export default class InteractionCreateEvent extends BaseEvent {
 
   public async invoke(interaction: Interaction) {
     if (interaction.isCommand()) {
-      await botCache.handleCommand(interaction.commandName, interaction);
+      let ctx = new CommandContext(interaction as CommandInteraction);
+      await botCache.startTask("time", ctx);
+      await botCache.handleMonitor('slash_command', interaction);
       return;
     }
   }
